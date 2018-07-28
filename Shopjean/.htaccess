@@ -1,0 +1,13 @@
+#([0-9]+)
+#([a-zA-Z0-9-_]+)
+
+RewriteEngine On
+RewriteRule ^index.html$ index.php
+RewriteRule ^tin-tuc$ blog.php
+RewriteRule ^lien-he$ contact.php
+RewriteRule ^shop/([a-zA-Z0-9-_]+)$ shop.php?GT=$1
+RewriteRule ^chi-tiet-san-pham/([0-9]+)$ chi_tiet_san_pham.php?ma_san_pham=$1
+RewriteRule ^chi-tiet-blog/([0-9]+)$ post_blog.php?ma_bai_viet=$i
+ErrorDocument 404 /FishionEveryOne/404.php
+ErrorDocument 403 /FishionEveryOne/403.php
+ErrorDocument 500 /FishionEveryOne/500.php

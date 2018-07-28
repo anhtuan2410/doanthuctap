@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteRule ^hoadon.html$ hoadon.php
+RewriteRule ^upload.html$ upload.php
+RewriteRule ^thembaiviet.html$ thembaiviet.php
+RewriteRule ^quantri.html$ quantri.php
+
+#ErrorDocument 404/error/loi404.html 
