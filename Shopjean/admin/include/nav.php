@@ -22,10 +22,12 @@ $(function() {
 
 <ul id="main-nav">
   <!-- Accordion Menu -->
-  
-  <li> <a href="quantri.html" class="nav-top-item no-submenu"> 
-    <!-- Add the class "no-submenu" to menu items with no sub menu  --> 
-    Danh mục </a> </li>
+ <li> <a href="quantri.html" class="nav-top-item" id="baiviet"> Báo cáo </a>
+    <ul>
+      <li><a href="quantri.html" title="baiviet">Doanh thu theo tháng</a></li>
+      <li><a href="thongkeloilai.php" title="baiviet">Thông kê lời lãi</a></li>
+    </ul>
+  </li>
  
   <li> <a href="baiviet.php" class="nav-top-item" id="baiviet"> Bài viết </a>
     <ul>

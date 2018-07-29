@@ -205,7 +205,8 @@
 		{
 				include('controllers/c_gio_hang.php');
 				require_once("models/m_tai_khoan.php");
-				
+				require_once("models/m_hoa_don.php");
+					$mhoadon=new M_hoa_don();
 			if(isset($_POST['DangNhap'])){
 				$ten_dang_nhap = $_POST['ten_dang_nhap'];
 				$mat_khau = $_POST['mat_khau'];
@@ -230,6 +231,7 @@
 							$gio_hang=$c_gio_hang->layGioHang();
 							foreach($gio_hang as $key=>$value)
 							{
+								$mhoadon->Update_kho2($value,$key);
 								$m_tai_khoan->themChiTietHoaDon($so_hoa_don, $key, $value, 0);
 							}
 							$m_tai_khoan->capNhatDonGia_san_pham($so_hoa_don);
@@ -263,9 +265,10 @@
 				if(isset($_SESSION["ten_dang_nhap"]) ){	
 
 					require_once("models/m_tai_khoan.php");
+					require_once("models/m_hoa_don.php");
 
 					$m_tai_khoan = new M_tai_khoan();
-
+					$mhoadon=new M_hoa_don();
 					$tk = $m_tai_khoan->Kiem_tra_ten_dang_nhap($_SESSION["ten_dang_nhap"]);		
 					$ma_khach_hang = $tk->ma_nguoi_dung;
 					$ngay_dat = date('Y-m-d');
@@ -279,6 +282,7 @@
 						$gio_hang=$c_gio_hang->layGioHang();
 						foreach($gio_hang as $key=>$value)
 						{
+								$mhoadon->Update_kho2($value,$key);
 								$m_tai_khoan->themChiTietHoaDon($so_hoa_don, $key, $value, 0);
 						}
 						$m_tai_khoan->capNhatDonGia_san_pham($so_hoa_don);

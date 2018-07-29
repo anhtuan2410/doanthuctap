@@ -67,7 +67,7 @@
           <td style="vertical-align:middle"><?php echo $ct->ten_san_pham; ?></td>
           
           <td style="vertical-align:middle"><?php echo $ct->so_luong_nhap ?></td>
-          <td style="vertical-align:middle"><?php echo number_format($ct->gia_nhap) ?> đồng</td>
+          <td style="vertical-align:middle"><?php echo number_format($ct->gia_nhap) ?> VND</td>
           
         </tr>
         <?php 
